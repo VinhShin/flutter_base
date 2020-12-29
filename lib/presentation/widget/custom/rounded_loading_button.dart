@@ -112,10 +112,10 @@ class RoundedLoadingButtonState extends State<RoundedLoadingButton2>
     super.initState();
 
     _buttonController = new AnimationController(
-        duration: new Duration(milliseconds: 500), vsync: this);
+        duration: new Duration(milliseconds: 500));
 
     _checkButtonControler = new AnimationController(
-        duration: new Duration(milliseconds: 1000), vsync: this);
+        duration: new Duration(milliseconds: 1000));
 
     _bounceAnimation = Tween<double>(begin: 0, end: widget.height).animate(
         new CurvedAnimation(

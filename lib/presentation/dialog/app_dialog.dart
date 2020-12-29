@@ -3,6 +3,8 @@ import 'package:e_mobiz/common/styles/font_size.dart';
 import 'package:e_mobiz/data/model/item_model.dart';
 import 'package:e_mobiz/data/model/marker_point.dart';
 import 'package:flutter/material.dart';
+import '../bloc/general/dialog_state.dart';
+import '../bloc/general/dialog_state.dart';
 import 'child/dialog_ok.dart';
 import 'child/dialog_ok_cancel.dart';
 import 'child/search_place_dialog.dart';
@@ -111,8 +113,11 @@ class AppDialog extends SimpleDialog {
   }
 
   static show(BuildContext context, DialogState dialogState, {Function dialogCallback}) {
-    if (dialogState is DialogOK) {
-      return showDialogOK(context, dialogState);
+    switch(dialogState.type){
+      case EDialog.OK:
+        return showDialogOK(context, dialogState);
+      case EDialog.OK_CANCEL:
+        return showDialogOkCancel(context, dialogState, dialogCallback);
     }
   }
 }
