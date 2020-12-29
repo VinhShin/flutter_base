@@ -1,9 +1,9 @@
 import 'package:e_mobiz/presentation/bloc/base/base_bloc.dart';
 import 'package:e_mobiz/presentation/bloc/base/base_bloc_state.dart';
-import 'package:e_mobiz/presentation/bloc/login/state/login_state.dart';
 import 'package:e_mobiz/common/styles/dimens.dart';
 import 'package:e_mobiz/data/remote/request/login_request.dart';
-import 'package:e_mobiz/presentation/bloc/login/login_bloc.dart';
+import 'package:e_mobiz/presentation/screens/home/bloc/login_bloc.dart';
+import 'package:e_mobiz/presentation/screens/home/bloc/state/login_state.dart';
 import 'package:e_mobiz/presentation/screens/home/home_screen.dart';
 import 'package:e_mobiz/presentation/widget/base/m_button.dart';
 import 'package:e_mobiz/presentation/widget/base_state.dart';
