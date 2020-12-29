@@ -1,0 +1,3 @@
+class BaseException implements Exception{
+
+}
